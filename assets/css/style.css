@@ -3,16 +3,12 @@
 
   /* gradient */
 
-  --bg-gradient-onyx: linear-gradient(
+  --bg-gradient-onyx: linear-gradient( /* Avata bg*/
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsl(0, 0%, 98%) 3%, 
+    hsl(0, 20%, 93%) 97%
   );
-  --bg-gradient-jet: linear-gradient(
-    to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+  --bg-gradient-jet: hsl(0, 0%, 5%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
     hsl(209, 100%, 54%), 
@@ -44,7 +40,7 @@
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(0, 0%, 100%); /* icon color */
-  --vegas-gold: hsl(45, 54%, 58%);
+  --vegas-gold: hsl(209, 100%, 54%); /* опыт работы в резюме дата*/
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -76,11 +72,11 @@
    * shadow
    */
   
-  /* --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25); */
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
   /**
    * transition
@@ -724,13 +720,13 @@ main {
 }
 
 .clients-item {
-  min-width: 50%;
-  scroll-snap-align: start;
+  max-width: 100%;
+  scroll-snap-align: right;
 }
 
 .clients-item img {
   width: 100%;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
   transition: var(--transition-1);
 }
 
@@ -1716,7 +1712,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* clients */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  .clients-item { min-width: calc(10% - 150px); }
 
 
 

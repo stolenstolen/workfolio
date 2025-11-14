@@ -157,3 +157,40 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+// Moscow time display function
+const moscowTimeElement = document.getElementById("moscow-time");
+
+function updateMoscowTime() {
+  const now = new Date();
+  
+  // Get UTC time components
+  let hours = now.getUTCHours();
+  let minutes = now.getUTCMinutes();
+  let seconds = now.getUTCSeconds();
+  
+  // Add 3 hours for Moscow time (UTC+3)
+  hours += 3;
+  
+  // Handle hour overflow
+  if (hours >= 24) {
+    hours -= 24;
+  }
+  
+  // Format time as HH:MM:SS
+  const formattedHours = String(hours).padStart(2, '0');
+  const formattedMinutes = String(minutes).padStart(2, '0');
+  const formattedSeconds = String(seconds).padStart(2, '0');
+  
+  if (moscowTimeElement) {
+    moscowTimeElement.textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds} +3 GMT`;
+  }
+}
+
+// Update time immediately and then every second
+if (moscowTimeElement) {
+  updateMoscowTime();
+  setInterval(updateMoscowTime, 1000);
+}

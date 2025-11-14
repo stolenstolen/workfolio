@@ -26,7 +26,7 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(209, 100%, 54%), 
+    hwb(209 8% 0%), 
     hsl(0, 0%, 100%)
   );
 
@@ -322,7 +322,7 @@ main {
 
 .info-content .title {
   color: var(--white-1);
-  background: var(--onyx);
+  background: rgb(41, 162, 255);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
@@ -1863,4 +1863,45 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+.page-footer {
+  padding: 30px 20px;
+  text-align: center;
+  background: var(--smoky-black);
+}
+
+.footer-copyright,
+.footer-time {
+  font-size: var(--fs-7);
+  color: var(--light-gray-70);
+  font-weight: var(--fw-300);
+  line-height: 1.8;
+  margin: 5px 0;
+}
+
+.footer-time {
+  font-family: var(--ff-poppins);
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-bottom: 45px;
+  }
+
+  .page-footer {
+    padding: 20px 15px;
+    padding-bottom: 100px;
+  }
+
+  .footer-copyright,
+  .footer-time {
+    font-size: var(--fs-8);
+  }
 }

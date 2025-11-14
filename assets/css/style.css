@@ -33,7 +33,7 @@
   /* solid */
 
   --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
+  --onyx: hsl(0, 0%, 7%);
    --eerie-black-1: hsl(240, 2%, 13%); /* left bar card bg */
   --eerie-black-2: hsl(0, 0%, 5%); /* card bg*/
   --smoky-black: hsl(0, 0%, 1.5%); /* bg color */
@@ -1704,6 +1704,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   .service-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
+  }
+
+  .service-item::before {
+    transition: var(--transition-1);
+  }
+
+  .service-item:hover::before {
+    background: var(--onyx);
   }
 
   /* testimonials */

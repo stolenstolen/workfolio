@@ -172,7 +172,7 @@ function updateMoscowTime() {
   let seconds = now.getUTCSeconds();
   
   // Add 3 hours for Moscow time (UTC+3)
-  hours += 3;
+  hours += 4;
   
   // Handle hour overflow
   if (hours >= 24) {
@@ -185,7 +185,7 @@ function updateMoscowTime() {
   const formattedSeconds = String(seconds).padStart(2, '0');
   
   if (moscowTimeElement) {
-    moscowTimeElement.textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds} +3 GMT`;
+    moscowTimeElement.textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds} +4 GMT`;
   }
 }
 
